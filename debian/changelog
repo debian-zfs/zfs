@@ -1,3 +1,9 @@
+zfs-linux (0.6.5.4-gh1~stretch1) stretch; urgency=low
+
+  * Adapted for 0.6.5.4
+
+ -- Fajar A. Nugraha <ubuntu-ppa@fajar.net>  Thu, 21 Jan 2016 04:40:00 +0700
+
 zfs-linux (0.6.5.2-2) wheezy; urgency=low
 
   * Fixing return variable from a bunch of assist functions.
