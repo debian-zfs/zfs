@@ -1,3 +1,9 @@
+zfs-linux (0.6.5.5-gh1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Fajar A. Nugraha <ubuntu-ppa@fajar.net>  Fri, 11 Mar 2016 14:40:00 +0700
+
 zfs-linux (0.6.5.4-gh1~stretch1) stretch; urgency=low
 
   * Adapted for 0.6.5.4
