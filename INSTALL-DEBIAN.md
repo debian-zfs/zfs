@@ -3,16 +3,17 @@
 - create build directory
 
   ```
-mkdir build-0.6.5.5
-cd build-0.6.5.5
+export VERSION=0.6.5.6
+mkdir build-$VERSION
+cd build-$VERSION
   ```
 
 - build spl
 
   ```
-wget https://github.com/debian-zfs/spl/archive/pkg-0.6.5.5.zip -O spl-pkg-0.6.5.5.zip
-unzip spl-pkg-0.6.5.5.zip
-cd spl-pkg-0.6.5.5/
+wget https://github.com/debian-zfs/spl/archive/pkg-$VERSION.zip -O spl-pkg-$VERSION.zip
+unzip spl-pkg-$VERSION.zip
+cd spl-pkg-$VERSION/
 dpkg-checkbuilddeps
   ```
 
@@ -26,15 +27,15 @@ cd ..
 - install spl
 
   ```
-dpkg -i spl_*.deb spl-dkms_*.deb
+dpkg -i spl_$VERSION*.deb spl-dkms_$VERSION*.deb
   ```
 
 - build zfs
 
   ```
-wget https://github.com/debian-zfs/zfs/archive/pkg-0.6.5.5.zip -O zfs-pkg-0.6.5.5.zip
-unzip zfs-pkg-0.6.5.5.zip
-cd zfs-pkg-0.6.5.5/
+wget https://github.com/debian-zfs/zfs/archive/pkg-$VERSION.zip -O zfs-pkg-$VERSION.zip
+unzip zfs-pkg-$VERSION.zip
+cd zfs-pkg-$VERSION/
 dpkg-checkbuilddeps
   ```
 
@@ -48,11 +49,11 @@ cd ..
 - install zfs
 
   ```
-dpkg -i libnvpair1_*.deb libuutil1_*.deb libzfs2_*.deb libzpool2_*.deb zfs-dkms_*.deb zfsutils_*.deb
+dpkg -i libnvpair1_$VERSION*.deb libuutil1_$VERSION*.deb libzfs2_$VERSION*.deb libzpool2_$VERSION*.deb zfs-dkms_$VERSION*.deb zfsutils_*.deb
   ```
 
 - install ``zfs-initramfs`` as well if you use zfs root
 
   ```
-dpkg -i zfs-initramfs_*.deb
+dpkg -i zfs-initramfs_$VERSION*.deb
   ```
